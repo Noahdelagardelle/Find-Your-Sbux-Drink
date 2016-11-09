@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,900')
+
+$green: #017143
+$soft-green: #58A283
+$black: #224e3c
+$soft-black: #4A4A4A
+$gray: #C5C5C5
+
+html
+  background: radial-gradient(#3AF499, #017143)
+  min-height: 100%
+  font-family: 'Raleway', sans-serif
+  height: 100vh
+  width: 100vw
+  display: flex
+  justify-content: center
+  align-items: center
+
+.modal-body-step-1
+  .title
+    margin-top: 70px
+
+.uppercase
+  text-transform: uppercase
+
+.title
+  text-align: center
+  margin-top: 0px
+  margin-bottom: 30px
+  color: $black
+  font-weight: 900
+  font-size: 18px
+  letter-spacing: 1px
+
+.description
+  text-align: center
+  font-weight: 500
+  font-size: 18px
+  color: $black
+  margin-bottom: 30px
+
+.or
+  position: relative
+  height: 140px
+  width: 40px
+  p
+    width: 20px
+    height: 40px
+    line-height: 40px
+    text-align: center
+    font-size: 18px
+    left: 9px
+    top: 35px
+    position: absolute
+    background: white
+    z-index: 1
+  hr
+    position: absolute
+    width: 2px
+    height: 140px
+    background: $gray
+    border: none
+    margin-right: 20px
+    display: block
+    left: 19px
+    z-index: 0
+    top: -7px
+
+.radio-container
+  width: 100%
+  height: 70%
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+.size-container
+  margin-top: 60px
+  width: 100%
+  height: 50%
+  display: flex
+  justify-content: space-around
+  align-items: baseline
+
+.less-margin
+  margin-top: -20px
+
+input[type=text]
+  width: 100%
+  border: none
+  border-bottom: 2px solid $gray
+  font-size: 64px
+  font-weight: 900
+  text-align: center
+  color: $green
+  margin-top: 40px
+
+input[type=text]:focus
+  border-bottom: 3px solid $soft-green
+
+textarea, input
+  outline: none
+
+.input-container
+  position: relative
+  .caf-or-no
+    text-transform: uppercase
+    font-size: 24px
+    color: $soft-black
+    margin-top: 10px
+    &::after
+      content: '✔️'
+      position: absolute
+      top: -30px
+      left: calc(50% - 15px)
+      display: none
+  &.is-hovered
+    .pop-up
+      display: flex
+      animation: pop 300ms ease-in-out forwards
+      transform-origin: center 60px
+      @keyframes pop
+        0%
+          opacity: 0
+          transform: scale(0.1) rotate(30deg) translateY(50px) rotateX(90deg)
+        50%
+          transform: rotate(-10deg) rotateX(-2deg)
+          opacity: 1
+        70%
+          transform: rotate(5deg)
+        100%
+          transform: scale(1)
+
+.radio-button,
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  margin: 0
+  cursor: pointer
+
+.caf-or-no
+  text-transform: capitalize
+
+.sweet-range-container
+  position: relative
+  width: 200px
+  height: 10px
+
+.range-frame
+  position: absolute
+  width: 196px
+  height: 6px
+  border: 2px solid $gray
+
+.range-body
+  position: absolute
+  left: -10px
+  top: -4.5px
+  width: 220px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.range-option
+  width: 15px
+  height: 15px
+  background: white
+  border: 2px solid $gray
+  border-radius: 50%
+  transition: all 200ms ease
+
+.pop-up
+  background: $soft-green
+  display: none
+  border-radius: 5px
+  position: relative
+  color: white
+  bottom: 60px
+  left: 36px
+  width: 132px
+  height: 40px
+  justify-content: center
+  line-height: 40px
+  margin-bottom: 10px
+  margin-left: -95px
+  cursor: default
+  &:after
+    top: 100%
+    left: 50%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+    border-color: rgba(0, 151, 167, 0)
+    border-top-color: $soft-green
+    border-width: 10px
+    margin-left: -10px
+
+.radio-button:hover + .range-option
+  box-shadow: 0px 0px 0px 2px white inset
+  background: $soft-green
+
+.radio-button:checked + .range-option
+  box-shadow: 0px 0px 0px 2px white inset
+  background: $green
+
+.radio-tile
+  text-align: center
+
+.radio-button:hover + .radio-tile
+  //background: pink
+  .icon svg path
+    fill: $soft-green
+  .radio-label
+    color: $soft-green
+
+.radio-button:checked + .radio-tile
+  transition: 300ms
+  //background: pink
+  .icon svg path
+    fill: $green
+  .radio-label
+    color: $green
+
+.radio-button:checked + .caf-or-no
+  color: $green
+  &::after
+    display: block
+    color: $green
+
+.radio-button:hover + .caf-or-no
+  color: $soft-green
+
+.radio-label
+  color: $soft-black
+  text-align: center
+  margin: 10px auto
+  display: block
+  font-weight: 900
+  font-size: 18px
+
+.form-group
+  width: 100%
+  height: 70%
+  border: 2px solid green
+
+.text-column
+  display: flex
+  flex-direction: column
+  max-width: 200px
+  justify-content: center
+  margin: 0 auto
+
+.sb-logo
+  width: 200px
+  height: 200px
+  background: white
+  border-radius: 50%
+  position: absolute
+  top: -83px
+  left: calc(50% - 100px)
+  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.3)
+  z-index: 0
+  transition: 300ms ease
+
+  &.logo-small
+    position: absolute
+    z-index: 1
+    height: 130px
+    width: 130px
+    top: -65px
+    left: calc(50% - 65px)
+
+.logo-cover
+  display: block
+  position: absolute
+  height: 200px
+  width: 200px
+  background: white
+  top: 0px
+  left: calc(50% - 100px)
+
+.rerun-button,
+.button
+  font-weight: 500
+  border-radius: 2px
+  background: $soft-green
+  width: 100px
+  height: 42px
+  color: white
+  text-transform: uppercase
+  letter-spacing: 1px
+  line-height: 42px
+  display: inline-block
+  cursor: pointer
+  transition: 300ms ease
+  position: absolute
+  bottom: 10px
+  left: calc(50% - 50px)
+  &:hover
+    background: darken($soft-green, 5%)
+  &.rerun-button
+    left: calc(50% - 62px)
+    bottom: -40px
+    width: auto
+    padding: 0 10px
+    border: 1px solid rgba(255,255,255,0.6)
+    margin-bottom: 50px
+    box-shadow: 0px 10px 15px -6px rgba(0,0,0,0.2)
+
+.begin
+  bottom: 120px
+
+.text-center
+  text-align: center
+
+.modal-container
+  width: 600px
+  height: 450px
+  perspective: 1000px
+  position: relative
+  margin-top: 40px
+
+.modal-wrap
+  width: 100%
+  height: 100%
+  border-radius: 5px
+  box-shadow: 0px 40px 40px -20px rgba(0,0,0,0.3)
+  overflow: hidden
+  background: white
+  transition: transform 300ms ease-in-out
+  z-index: 1
+  //position: relative
+
+.modal-header
+  height: 45px
+  width: 100%
+  background: white
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.1)
+  border-top-right-radius: 5px
+  border-top-left-radius: 5px
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  top: 0
+  z-index: 1
+
+  span
+    display: block
+    height: 12px
+    width: 12px
+    margin: 5px
+    border-radius: 50%
+    background: rgba(0,0,0,0.2)
+
+    &.is-active
+      background: rgba(0,0,0,0.4)
+      background: $green
+
+.modal-bodies
+  height: 85%
+  width: 100%
+  margin-top: 45px
+  position: relative
+  perspective: 1000px
+
+.modal-body
+  background: white
+  padding: 40px 100px
+  height: 100%
+  width: 100%
+  display: none
+  border-radius: 5px
+  box-sizing: border-box
+  &.is-showing
+    display: block
+
+.animate-out
+  animation: out 800ms cubic-bezier(.67,-0.39,.61,1.16) forwards
+  transform-origin: center
+
+.animate-in
+  animation: in 600ms cubic-bezier(.83,-0.25,.31,1.37) forwards
+  display: block
+  transform-origin: center
+
+.animate-flip
+  animation: flip 600ms ease-in-out forwards
+  box-shadow: none
+
+.animate-flip-back
+  animation: flip-back 600ms ease-in-out forwards
+  box-shadow: none
+
+
+@keyframes out
+  0%
+    transform: translateX(0px)
+  //60%
+    transform: rotate(60deg)
+  100%
+    transform: translateX(-800px)
+
+@keyframes in
+  0%
+    //opacity: 0
+    transform: translateX(800px)
+  100%
+    //opacity: 1
+    transform: translateX(0px)
+
+@keyframes flip
+  0%
+    transform: rotateX(0deg)
+  50%
+    transform: rotateX(-90deg)
+  100%
+    transform: rotateX(-180deg)
+
+@keyframes flip-back
+  0%
+    transform: rotateX(0deg)
+  50%
+    transform: rotateX(90deg)
+  100%
+    transform: rotateX(180deg)
+
+.final-drink-container
+  height: 60%
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: -30px
+  &.appear
+    animation: appear 400ms ease-in-out forwards
+
+    @keyframes appear
+      0%
+        transform: scale(0.1)
+      50%
+        transform: scale(1.2)
+      100%
+        transform: scale(1)
+
+.for
+  text-align: center
+  font-size: 18px
+  margin-bottom: -10px
+  margin-top: -10px
+
+.name
+  font-size: 48px
+  font-weight: bold
+  text-align: center
+  color: $soft-black
+
+.final-drink
+  position: relative
+
+.rays-container
+  position: relative
+
+.ray
+  height: 3px
+  width: 60px
+  background: $soft-black
+  display: inline-block
+
+.left, .right
+  position: absolute
+  height: 100px
+  width: 60px
+  top: -90px
+.left
+  right: 80px
+  text-align: right
+  .top
+    width: 30px
+    margin-bottom: 20px
+    transform: rotate(30deg)
+  .middle
+    margin-bottom: 10px
+  .bottom
+    transform: rotate(-30deg)
+    width: 30px
+.right
+  left: 80px
+  .top
+    width: 30px
+    margin-bottom: 20px
+    transform: rotate(-30deg)
+  .middle
+    margin-bottom: 10px
+  .bottom
+    transform: rotate(30deg)
+    width: 30px
+
+.drink
+  display: none
+
+.drink-hot
+  //display: block
+  &.chosen
+    display: block
+.drink-cold
+  //display: block
+  &.chosen
+    display: block
+
+/// alert ////
+
+.overlay
+  position: absolute
+  background: fade-out($black, 0.2)
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1000
+  display: none
+  justify-content: center
+  align-items: center
+  opacity: 0
+  pointer-events: none
+  transition: all 300ms ease
+
+  &.is-open
+    transition: all 500ms ease-in-out
+    display: flex
+    opacity: 1
+    pointer-events: auto
+
+    .alert
+      transform: translate(0px, 0px)
+
+.alert
+  transition: all 300ms cubic-bezier(0.42, 0, 0.52, 1.38)
+  transform: translate(0px, -100px)
+  width: 400px
+  height: 200px
+  background: white
+  border-radius: 5px
+
+  p
+    color: $soft-black
+    font-size: 16px
+    width: 80%
+    margin: 60px auto 0px
+    text-align: center
+
+  .dismiss
+    text-align: center
+    display: block
+    position: relative
+    margin-top: 40px

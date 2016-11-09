@@ -26,6 +26,10 @@ $(function() {
             var cafination = 'caffeinated';
         }
 
+        if(name === ''){
+          name = 'Person with no name!'
+        }
+
         $('.name').append(name);
 
         $('.output-text').append('Looks like you could use a ' + size + ' ' + cafination + ' ' + hotOrCold + ' ' + '<b>' + drink + '</b>');

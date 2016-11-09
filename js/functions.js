@@ -42,7 +42,7 @@ $(function() {
     );
 
 
-    $('.button').click(function() {
+    $('.next, .button').click(function() {
         var $btn = $(this),
             $step = $btn.parents('.modal-body'),
             stepIndex = $step.index(),

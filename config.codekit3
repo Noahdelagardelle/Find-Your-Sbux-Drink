@@ -58,12 +58,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/styles\/css\/.normalize.css.icloud": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/styles\/css\/.normalize.css.icloud",
-		"oF": 0
-		},
 	"\/styles\/css\/main.css": {
 		"aP": 0,
 		"bl": 0,
@@ -71,6 +65,16 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/styles\/css\/main-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/styles\/css\/normalize.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/styles\/css\/normalize-ck.css",
 		"oF": 0,
 		"oS": 0
 		},
@@ -117,9 +121,9 @@
 		"dS": 0,
 		"ft": 2,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/styles\/css\/main.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 1,
 		"uL": 1
 		}

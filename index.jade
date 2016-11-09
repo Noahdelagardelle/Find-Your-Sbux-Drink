@@ -21,7 +21,6 @@ html(lang='en')
   
     .modal-container
       img(src="images/sbux-logo.png" alt="").sb-logo
-      .logo-cover
       .modal-wrap
         .modal-header
           span.is-active
@@ -44,7 +43,7 @@ html(lang='en')
             
             .radio-container
               .input-container
-                input#hot.radio-button(type='radio', name='hot-or-cold', value='hot')
+                input#hot.radio-button.next(type='radio', name='hot-or-cold', value='hot')
                 .radio-tile
                   .icon.hot-cup
                     svg(width='60px', viewbox='0 0 51 115', version='1.1')
@@ -63,7 +62,7 @@ html(lang='en')
                 hr
                 
               .input-container
-                input#cold.radio-button(type='radio', name='hot-or-cold', value='iced')
+                input#cold.radio-button.next(type='radio', name='hot-or-cold', value='iced')
                 .radio-tile
                   .icon.cold-cup
                     svg(width='60px', viewbox='0 0 51 110')
@@ -80,25 +79,25 @@ html(lang='en')
                             path#Path-5-Copy(d='M41.7033425,88.0446827 C41.0680606,88.3305189 40.3172662,88.6188912 39.457758,88.8895947 C36.9782985,89.6705044 34.142179,90.140625 31,90.140625 C30.1715729,90.140625 29.5,90.8121979 29.5,91.640625 C29.5,92.4690521 30.1715729,93.140625 31,93.140625 C34.4605746,93.140625 37.5982908,92.6205112 40.3589717,91.7510303 C42.0389441,91.2219203 43.2368662,90.682932 43.902635,90.3016782 C44.621532,89.8900005 44.8705825,88.9734886 44.4589048,88.2545916 C44.0472271,87.5356945 43.1307152,87.286644 42.4118181,87.6983218 C42.3089648,87.7572209 42.0705228,87.879475 41.7033425,88.0446827 Z')
                   label.radio-label(for='cold') COLD
                 
-            .text-center
-              .button.btn-hot-or-cold Next
+            //.text-center
+              //.button.btn-hot-or-cold Next
                 
           .modal-body.modal-body-step-3
             .title Would you prefer something with caffeine or no caffeine?
             
             .radio-container.less-margin
               .input-container
-                input#caf.radio-button(type='radio', name='caf-or-no', value='caf')
+                input#caf.radio-button.next(type='radio', name='caf-or-no', value='caf')
                 .radio-tile.caf-or-no Caffeinated
               .or
                 p or
                 hr
               .input-container
-                input#no.radio-button(type='radio', name='caf-or-no', value='no')
+                input#no.radio-button.next(type='radio', name='caf-or-no', value='no')
                 .radio-tile.caf-or-no No Caffeine
             
-            .text-center
-              .button Next
+            //.text-center
+              //.button Next
                 
           .modal-body.modal-body-step-4
             .title How sweet do you like it?
@@ -108,35 +107,34 @@ html(lang='en')
                 .range-frame
                 .range-body
                   .input-container
-                    input.radio-button(type='radio', name='sweet-or-rich', value='White Mocha')
+                    input.radio-button.next(type='radio', name='sweet-or-rich', value='White Mocha')
                     .radio-tile.range-option
                       .pop-up Very sweet!
                   .input-container
-                    input.radio-button(type='radio', name='sweet-or-rich', value='Frappuccino')
+                    input.radio-button.next(type='radio', name='sweet-or-rich', value='Frappuccino')
                     .radio-tile.range-option
                       .pop-up Pretty sweet
                   .input-container
-                    input.radio-button(type='radio', name='sweet-or-rich', value='Chai Tea Latte')
+                    input.radio-button.next(type='radio', name='sweet-or-rich', value='Chai Tea Latte')
                     .radio-tile.range-option
                       .pop-up Balanced
                   .input-container
-                    input.radio-button(type='radio', name='sweet-or-rich', value='Caramel Macchiato')
+                    input.radio-button.next(type='radio', name='sweet-or-rich', value='Caramel Macchiato')
                     .radio-tile.range-option
                       .pop-up Pretty rich
                   .input-container
-                    input.radio-button(type='radio', name='sweet-or-rich', value='Latte')
+                    input.radio-button.next(type='radio', name='sweet-or-rich', value='Latte')
                     .radio-tile.range-option
                       .pop-up Very rich!
-                      
               p.uppercase Rich
-            .text-center
-              .button Next
+            //.text-center
+              //.button Next
                 
           .modal-body.modal-body-step-5
             .title What size would you prefer?
             .size-container
               .input-container
-                input.radio-button(type='radio', name='size', value='tall')
+                input.radio-button.next(type='radio', name='size', value='tall')
                 .radio-tile
                   .icon
                     svg(width="47px", viewbox='0 0 47 63', version='1.1')
@@ -148,7 +146,7 @@ html(lang='en')
                   label.radio-label(for='t') TALL
                   
               .input-container
-                input.radio-button(type='radio', name='size', value='grande')
+                input.radio-button.next(type='radio', name='size', value='grande')
                 .radio-tile
                   .icon
                     svg(width='53px', viewbox='0 0 53 78', version='1.1')
@@ -160,7 +158,7 @@ html(lang='en')
                   label.radio-label(for='g') GRANDE
                   
               .input-container
-                input.radio-button(type='radio', name='size', value='venti')
+                input.radio-button.next(type='radio', name='size', value='venti')
                 .radio-tile
                   .icon
                     svg(width='52px', viewbox='0 0 51 90', version='1.1')
@@ -170,8 +168,8 @@ html(lang='en')
                             path#Combined-Shape-Copy-8(d='M6,34.5597902 C7.79336764,32.973034 10.2138502,32 12.8773035,32 C18.4054335,32 22.8868683,36.1917402 22.8868683,41.3625139 C22.8868683,46.5332875 18.4054335,50.7250277 12.8773035,50.7250277 C10.9667889,50.7250277 9.18129002,50.2243727 7.6625852,49.3556761 L6,34.5597902 Z')
                             path#Path-6-Copy-2(d='M51.4911081,5.62923033 L51.6088376,4.55281432 L50.6242176,4.10219786 C49.5812666,3.6248859 47.5465327,2.94091773 44.4815373,2.26797044 C39.4420583,1.16150756 33.2942371,0.5 26,0.5 C18.7057629,0.5 12.5579417,1.16150756 7.5184627,2.26797044 C4.45346725,2.94091773 2.41873335,3.6248859 1.37578238,4.10219786 L0.389168993,4.55372662 L0.509207861,5.63209338 L9.12295235,83.0134939 L9.18392061,83.561201 L9.58497403,83.9391644 C10.3705917,84.6795514 11.8248001,85.7318447 13.9227063,86.7685415 C17.3799031,88.4769423 21.4197059,89.5 26,89.5 C30.5820357,89.5 34.6521828,88.45836 38.1593734,86.7199038 C40.2845226,85.6665027 41.7662716,84.5985052 42.5700994,83.8489488 L42.9776435,83.4689205 L43.0382282,82.9149862 L51.4911081,5.62923033 Z M40.524141,81.6548535 C40.3929019,81.7772317 40.0947156,82.0241961 39.6356743,82.3550584 C38.8470684,82.9234605 37.9088203,83.4957682 36.8270227,84.0319973 C33.7169615,85.573603 30.0971196,86.5 26,86.5 C21.9011388,86.5 18.3112768,85.5908873 15.2517622,84.0790042 C14.1889395,83.5538021 13.2708831,82.9935413 12.5023339,82.4374042 C12.0559228,82.1143725 11.7677112,81.8739153 11.642515,81.755927 L12.1045366,82.6815975 L3.49079214,5.30019702 L2.62421762,6.83009255 C2.81342682,6.74349997 3.24296823,6.57328721 3.91799179,6.34638057 C5.07521379,5.95738473 6.48808515,5.56565727 8.16181539,5.19817476 C12.989119,4.13829689 18.9212282,3.5 26,3.5 C33.0787718,3.5 39.010881,4.13829689 43.8381846,5.19817476 C45.5119148,5.56565727 46.9247862,5.95738473 48.0820082,6.34638057 C48.7570318,6.57328721 49.1865732,6.74349997 49.3757824,6.83009255 L48.5088919,5.30306008 L40.0560121,82.588816 L40.524141,81.6548535 Z')
                   label.radio-label(for='v') VENTI
-            .text-center
-              .button Next
+            //.text-center
+              //.button Next
                 
           .modal-body.modal-body-step-6
             .title What name would you like on that order?

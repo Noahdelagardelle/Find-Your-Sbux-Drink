@@ -12,21 +12,13 @@
     <script src="js/jquery.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="overlay">
-      <div class="alert">
-        <!-- make this dependent on the error-->
-        <p>Make sure you select an option! </p>
-        <div class="button dismiss">Okay</div>
-      </div>
-    </div>
     <div class="modal-container"><img src="images/sbux-logo.png" alt="" class="sb-logo">
-      <div class="logo-cover"></div>
       <div class="modal-wrap">
         <div class="modal-header"><span class="is-active"></span><span></span><span></span><span></span><span></span><span></span></div>
         <div class="modal-bodies">
           <div class="modal-body modal-body-step-1 is-showing">
             <div class="title">Not sure what to order?</div>
-            <div class="description">Lets figure out what sounds good today!
+            <div class="description">Let's figure out what sounds good!
               <div class="text-center">
                 <div class="button begin">BEGIN</div>
               </div>
@@ -36,7 +28,7 @@
             <div class="title">Would you like your drink to be…</div>
             <div class="radio-container">
               <div class="input-container">
-                <input id="hot" type="radio" name="hot-or-cold" value="hot" class="radio-button">
+                <input id="hot" type="radio" name="hot-or-cold" value="hot" class="radio-button next">
                 <div class="radio-tile">
                   <div class="icon hot-cup">
                     <svg width="60px" viewbox="0 0 51 115" version="1.1">
@@ -61,7 +53,7 @@
                 <hr>
               </div>
               <div class="input-container">
-                <input id="cold" type="radio" name="hot-or-cold" value="iced" class="radio-button">
+                <input id="cold" type="radio" name="hot-or-cold" value="iced" class="radio-button next">
                 <div class="radio-tile">
                   <div class="icon cold-cup">
                     <svg width="60px" viewbox="0 0 51 110">
@@ -85,15 +77,16 @@
                 </div>
               </div>
             </div>
-            <div class="text-center">
-              <div class="button btn-hot-or-cold">Next</div>
-            </div>
+            <!--.text-center
+            //.button.btn-hot-or-cold Next
+              
+            -->
           </div>
           <div class="modal-body modal-body-step-3">
             <div class="title">Would you prefer something with caffeine or no caffeine?</div>
             <div class="radio-container less-margin">
               <div class="input-container">
-                <input id="caf" type="radio" name="caf-or-no" value="caf" class="radio-button">
+                <input id="caf" type="radio" name="caf-or-no" value="caf" class="radio-button next">
                 <div class="radio-tile caf-or-no">Caffeinated</div>
               </div>
               <div class="or">
@@ -101,13 +94,14 @@
                 <hr>
               </div>
               <div class="input-container">
-                <input id="no" type="radio" name="caf-or-no" value="no" class="radio-button">
+                <input id="no" type="radio" name="caf-or-no" value="no" class="radio-button next">
                 <div class="radio-tile caf-or-no">No Caffeine</div>
               </div>
             </div>
-            <div class="text-center">
-              <div class="button">Next</div>
-            </div>
+            <!--.text-center
+            //.button Next
+              
+            -->
           </div>
           <div class="modal-body modal-body-step-4">
             <div class="title">How sweet do you like it?</div>
@@ -117,31 +111,31 @@
                 <div class="range-frame"></div>
                 <div class="range-body">
                   <div class="input-container">
-                    <input type="radio" name="sweet-or-rich" value="White Mocha" class="radio-button">
+                    <input type="radio" name="sweet-or-rich" value="White Mocha" class="radio-button next">
                     <div class="radio-tile range-option">
                       <div class="pop-up">Very sweet!</div>
                     </div>
                   </div>
                   <div class="input-container">
-                    <input type="radio" name="sweet-or-rich" value="Frappuccino" class="radio-button">
+                    <input type="radio" name="sweet-or-rich" value="Frappuccino" class="radio-button next">
                     <div class="radio-tile range-option">
                       <div class="pop-up">Pretty sweet</div>
                     </div>
                   </div>
                   <div class="input-container">
-                    <input type="radio" name="sweet-or-rich" value="Chai Tea Latte" class="radio-button">
+                    <input type="radio" name="sweet-or-rich" value="Chai Tea Latte" class="radio-button next">
                     <div class="radio-tile range-option">
                       <div class="pop-up">Balanced</div>
                     </div>
                   </div>
                   <div class="input-container">
-                    <input type="radio" name="sweet-or-rich" value="Caramel Macchiato" class="radio-button">
+                    <input type="radio" name="sweet-or-rich" value="Caramel Macchiato" class="radio-button next">
                     <div class="radio-tile range-option">
                       <div class="pop-up">Pretty rich</div>
                     </div>
                   </div>
                   <div class="input-container">
-                    <input type="radio" name="sweet-or-rich" value="Latte" class="radio-button">
+                    <input type="radio" name="sweet-or-rich" value="Latte" class="radio-button next">
                     <div class="radio-tile range-option">
                       <div class="pop-up">Very rich!</div>
                     </div>
@@ -150,15 +144,16 @@
               </div>
               <p class="uppercase">Rich</p>
             </div>
-            <div class="text-center">
-              <div class="button">Next</div>
-            </div>
+            <!--.text-center
+            //.button Next
+              
+            -->
           </div>
           <div class="modal-body modal-body-step-5">
             <div class="title">What size would you prefer?</div>
             <div class="size-container">
               <div class="input-container">
-                <input type="radio" name="size" value="tall" class="radio-button">
+                <input type="radio" name="size" value="tall" class="radio-button next">
                 <div class="radio-tile">
                   <div class="icon">
                     <svg width="47px" viewbox="0 0 47 63" version="1.1">
@@ -176,7 +171,7 @@
                 </div>
               </div>
               <div class="input-container">
-                <input type="radio" name="size" value="grande" class="radio-button">
+                <input type="radio" name="size" value="grande" class="radio-button next">
                 <div class="radio-tile">
                   <div class="icon">
                     <svg width="53px" viewbox="0 0 53 78" version="1.1">
@@ -194,7 +189,7 @@
                 </div>
               </div>
               <div class="input-container">
-                <input type="radio" name="size" value="venti" class="radio-button">
+                <input type="radio" name="size" value="venti" class="radio-button next">
                 <div class="radio-tile">
                   <div class="icon">
                     <svg width="52px" viewbox="0 0 51 90" version="1.1">
@@ -212,15 +207,16 @@
                 </div>
               </div>
             </div>
-            <div class="text-center">
-              <div class="button">Next</div>
-            </div>
+            <!--.text-center
+            //.button Next
+              
+            -->
           </div>
           <div class="modal-body modal-body-step-6">
             <div class="title">What name would you like on that order?</div>
             <div class="name-input-container">
               <form>
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" class="name-input">
               </form>
             </div>
             <div class="text-center">

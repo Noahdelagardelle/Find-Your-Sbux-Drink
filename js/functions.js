@@ -26,6 +26,10 @@ $(function() {
             var cafination = 'caffeinated';
         }
 
+        if(name === ''){
+          name = 'Person with no name!'
+        }
+
         $('.name').append(name);
 
         $('.output-text').append('Looks like you could use a ' + size + ' ' + cafination + ' ' + hotOrCold + ' ' + '<b>' + drink + '</b>');
@@ -42,7 +46,7 @@ $(function() {
     );
 
 
-    $('.button').click(function() {
+    $('.next, .button').click(function() {
         var $btn = $(this),
             $step = $btn.parents('.modal-body'),
             stepIndex = $step.index(),
@@ -102,24 +106,25 @@ $(function() {
         }, 600);
 
         setTimeout(function() {
-            $('.sb-logo').addClass('logo-small');
+            $('.sb-logo').addClass('logo-jump');
         }, 300)
 
         // after the animation, adjust the classes
         setTimeout(function() {
             $step.next().removeClass('animate-in')
                 .addClass('is-showing');
-        }, 600);
+            $('.sb-logo').removeClass('logo-jump');
+        }, 800);
     }
 
     $('.rerun-button').click(function() {
+
+      $('.sb-logo').addClass('logo-jump');
 
         $('.modal-wrap').addClass('animate-flip-back')
             .children().animate({
                 'opacity': '0'
             });
-
-        $('.sb-logo').removeClass('logo-small');
 
         setTimeout(function() {
             window.location.replace("index.html");
